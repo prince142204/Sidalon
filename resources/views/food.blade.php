@@ -6,239 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delicious Food - Manes Winchester Family Law Firm</title>
   <link rel="stylesheet" href="{{ asset('css/food.css') }}">
-  <style>
-    /* General Styling */
-    body {
-      font-family: 'Poppins', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    h1, h2, h4 {
-      color: #333;
-    }
-
-    /* Navigation Bar */
-    nav {
-      background-color: #2c3e50;
-      padding: 15px 20px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #f39c12;
-    }
-
-    /* Hero Section */
-    .hero {
-      background-image: url('');
-      background-size: cover;
-      background-position: center;
-      height: 450px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      z-index: 2;
-    }
-
-    .hero p {
-      font-size: 1.5rem;
-      margin-top: 10px;
-      z-index: 2;
-    }
-
-    /* Info and About Sections */
-    .info-section, .about-section {
-      padding: 40px 20px;
-      background-color: #fff;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .info-section p, .about-section p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1.1rem;
-    }
-
-    /* Featured Dishes */
-    .featured-dishes {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding: 40px 20px;
-      background-color: #f0f0f0;
-    }
-
-    .dish-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      width: 280px;
-      margin: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .dish-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .dish-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .dish-card h4 {
-      padding: 15px;
-      margin: 0;
-      font-size: 1.3rem;
-    }
-
-    .dish-card p {
-      padding: 0 15px 15px;
-      font-size: 1rem;
-      color: #777;
-    }
-
-    /* Customer Reviews */
-    .customer-reviews {
-      background-color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    .review-card {
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px;
-      width: 320px;
-      display: inline-block;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .review-card p {
-      color: #555;
-    }
-
-    .review-card strong {
-      font-size: 1.2rem;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      position: relative;
-    }
-
-    footer .footer-cols {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-
-    footer .footer-col {
-      width: 30%;
-      margin-bottom: 20px;
-    }
-
-    footer .footer-col h5 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    footer .social-icons a {
-      color: white;
-      margin: 0 10px;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-
-    footer .social-icons a:hover {
-      color: #f39c12;
-    }
-
-    footer p {
-      margin-top: 20px;
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-      }
-
-      .footer-col {
-        width: 100%;
-        text-align: center;
-      }
-
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav ul li {
-        margin: 10px 0;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -252,40 +19,80 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero Section Start -->
   <div class="hero">
-    <div>
+    <div class="hero-content">
       <h1>Delicious Food Awaits</h1>
       <p>Experience the Taste of Excellence</p>
+      <a href="#menu" class="btn">Explore Menu</a>
     </div>
   </div>
+  <!-- Hero Section End -->
 
-  <!-- Info Section -->
-  <div class="info-section">
-    <h2>Welcome to Our Culinary World</h2>
-    <p>
-      At Manes Winchester Family Law Firm, we offer a delightful array of dishes that showcase the best of local ingredients and culinary craftsmanship. Join us for a meal that not only satisfies your hunger but also ignites your taste buds!
-    </p>
-  </div>
+  <div class="food-section">
+    <div class="section-header">
+      <h1 class="section-title">Explore Our Futuristic Menu</h1>
+      <div class="currency-selector">
+        <label for="currency">Currency:</label>
+        <select id="currency" onchange="convertCurrency()">
+          <option value="USD">USD</option>
+          <option value="INR">INR</option>
+          <option value="EUR">EUR</option>
+        </select>
+      </div>
+    </div>
 
-  <!-- About Us Section -->
-  <div class="about-section">
-    <h2>About Us</h2>
-    <p>
-      We are passionate about food and believe in creating memorable dining experiences. Our chefs are dedicated to bringing you the freshest ingredients, innovative recipes, and the warmth of genuine hospitality. Come dine with us and discover the joy of great food!
-    </p>
+    <div class="food-grid" id="getDishes">
+      <!-- Food cards will be dynamically inserted here -->
+    </div>
   </div>
+  <div class="booking-section">
+    <h1 class="booking-title">Reserve Your Table</h1>
+    <p class="booking-subtitle">Experience a dining journey like no other!</p>
+    
+    <form id="booking-form" class="booking-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+        </div>
 
-  <!-- Featured Dishes Section -->
-  <div class="featured-dishes" id="card-section">
-    <h2>Menu Highlights</h2>
-  </div>
+        <div class="form-group">
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+        </div>
 
-  <!-- Customer Reviews Section -->
-  <div class="customer-reviews">
-    <h2>What Our Customers Say</h2>
-    <div id="reviews-section"></div>
-  </div>
+        <div class="form-group">
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" required>
+                <option value="">Select...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        </div>
+
+        <button type="submit" class="book-btn">Book Now</button>
+    </form>
+
+    <div class="confirmation-message" id="confirmation-message">
+        <h2>Your table is reserved!</h2>
+        <p>Thank you for your booking. We look forward to serving you!</p>
+    </div>
+</div>
+
 
   <!-- Footer -->
   <footer>
@@ -310,7 +117,95 @@
     </div>
     <p>&copy; 2024 Manes Winchester Family Law Firm. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('booking-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Show confirmation message
+    document.getElementById('confirmation-message').style.display = 'block';
+
+    // Hide the booking form
+    this.style.display = 'none';
+
+    // Optionally reset the form after submission
+    this.reset();
+});
+
+    function convertCurrency() {
+      const currency = document.getElementById("currency").value;
+      const foodCards = document.querySelectorAll('.food-card');
+
+      foodCards.forEach(card => {
+        const usdPrice = card.getAttribute('data-usd');
+        const inrPrice = card.getAttribute('data-inr');
+        const eurPrice = card.getAttribute('data-eur');
+        let priceElement = card.querySelector('.price');
+
+        switch (currency) {
+          case 'USD':
+            priceElement.textContent = `Price: $${usdPrice}`;
+            break;
+          case 'INR':
+            priceElement.textContent = `Price: ₹${inrPrice}`;
+            break;
+          case 'EUR':
+            priceElement.textContent = `Price: €${eurPrice}`;
+            break;
+        }
+      });
+    }
+
+    const orderItem = [
+      {
+        src: "images/drink/wallpaper2you_124604_20180601002542.jpg",
+        heading: "Delicious Pasta",
+        para: "Italian delicacy with rich flavors and perfect textures.",
+        price: "$12",
+        usd: 12,
+        inr: 990,
+        eur: 11
+      },
+      {
+        src: "images/drink/edit_lifestyle_group-landscape-wine-1.webp",
+        heading: "Spicy Pizza",
+        para: "A zesty pizza with the perfect combination of heat and flavor.",
+        price: "$10",
+        usd: 10,
+        inr: 825,
+        eur: 9
+      },
+      {
+        src: "images/drink/glass-drink-with-lemon-orange-slices-it_1308172-328683.jpg",
+        heading: "Naruto's Ramen",
+        para: "Enjoy the taste of the Hidden in the leaf village.",
+        price: "$15.99",
+        usd: 15.99,
+        inr: 1325,
+        eur: 14.5
+      },
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const cardsContainer = document.getElementById("getDishes");
+      cardsContainer.innerHTML = orderItem
+        .map(
+          (item) => `
+            <div class="food-card" data-usd="${item.usd}" data-inr="${item.inr}" data-eur="${item.eur}">
+              <div class="food-img-container">
+                  <img src="${item.src}" alt="${item.heading}">
+              </div>
+              <div class="card-content">
+                  <h3>${item.heading}</h3>
+                  <p>${item.para}</p>
+                  <span class="price">${item.price}</span>
+                  <button class="order-btn">Order Now</button>
+              </div>
+            </div>`
+        )
+        .join("");
+    });
+  </script>
 </body>
 
 </html>
- 

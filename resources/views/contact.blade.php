@@ -96,14 +96,15 @@ return view('login');
         </div>
 
         <!-- Contact Form -->
-        <div class="contact-form">
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <input type="text" placeholder="Subject">
-            <textarea placeholder="Message" rows="5"></textarea>
-            <button type="submit">Send Message</button>
-        </div>
-    </div>
+        <form action="{{ url('/contact') }}" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+    <textarea name="message" placeholder="Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
     
 
 </body>

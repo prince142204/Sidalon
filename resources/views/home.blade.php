@@ -8,21 +8,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+  
   <!-- Corrected CSS link using asset() helper -->
   <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
 
+
+
 <body>
   <!-- Navigation Bar -->
-  <nav>
-    <ul>
-      <li><a href="{{url('/home')}}">Home</a></li>
-      <li><a href="{{url('/drink')}}">Drink</a></li>
-      <li><a href="{{url('/food')}}">Food</a></li>
-      <li><a href="{{url('/contact')}}">Contact</a></li>
-    </ul>
-  </nav>
-
+  <div class="background-animation"></div>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1>Beer & Wine Cafe</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="menu" id="menu">
+            <div class="menu-item" data-section="home">
+                <span>Home</span>
+            </div>
+            <div class="menu-item" data-section="menu">
+                <span>Menu</span>
+            </div>
+            <div class="menu-item" data-section="about">
+                <span>About Us</span>
+            </div>
+            <div class="menu-item" data-section="events">
+                <span>Events</span>
+            </div>
+            <div class="menu-item" data-section="contact">
+                <span>Contact</span>
+            </div>
+        </div>
+    </nav>
 
   <!-- Hero Section -->
   <div class="hero">
@@ -85,6 +107,7 @@
 
   <!-- JavaScript to dynamically insert cards -->
   <script>
+    
     const images = [{
         src: "{{ asset('images/hk.webp') }}",
         heading: "Vine & Dine Café",
@@ -118,7 +141,28 @@
             </div>`
       )
       .join("");
+
+
+// JavaScript to handle menu toggle for mobile view
+const menuItems = document.querySelectorAll('.menu-item');
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// Add click event to each menu item
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const section = item.getAttribute('data-section');
+        alert(`Navigating to ${section} section!`); // Replace with actual navigation logic
+    });
+});
+
+// Toggle menu on hamburger click
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
   </script>
+  
 </body>
 
 </html>
